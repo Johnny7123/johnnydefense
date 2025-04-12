@@ -1,3 +1,6 @@
+baseURL: "http://johnny7123.github.io/johnnydefense/"
+languageCode: en-us
+title: blog
 caches:
   images:
     dir: :cacheDir/images
