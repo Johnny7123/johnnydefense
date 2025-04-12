@@ -1,4 +1,4 @@
-baseURL: "https://johnny7123.github.io/johnnydefense/"
+baseURL: "/"
 languageCode: en-us
 title: blog
 theme: "hugo-profile"
@@ -33,7 +33,7 @@ Menus:
     - identifier: blog
       name: Blog
       title: Blog posts
-      url: /blogs
+      url: /posts
       weight: 1
     - identifier: gallery
       name: Gallery

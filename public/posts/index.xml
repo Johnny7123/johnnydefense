@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on </title>
-    <link>/posts/</link>
-    <description>Recent content in Posts on </description>
+    <title>Posts on blog</title>
+    <link>//localhost:1313/posts/</link>
+    <description>Recent content in Posts on blog</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>en-us</language>
     <lastBuildDate>Sat, 12 Apr 2025 13:22:41 -0400</lastBuildDate>
-    <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Post</title>
-      <link>/posts/my-first-post/</link>
+      <link>//localhost:1313/posts/my-first-post/</link>
       <pubDate>Sat, 12 Apr 2025 13:22:41 -0400</pubDate>
-      <guid>/posts/my-first-post/</guid>
+      <guid>//localhost:1313/posts/my-first-post/</guid>
       <description>&lt;h2 id=&#34;hello&#34;&gt;hello&lt;/h2&gt;</description>
+    </item>
+    <item>
+      <title>Magnetic Levitation Propulsion</title>
+      <link>//localhost:1313/posts/magnetic-levitation-propulsion/</link>
+      <pubDate>Sat, 12 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/magnetic-levitation-propulsion/</guid>
+      <description>&lt;h1 id=&#34;magnetic-levitation-propulsion-theory-and-engineering&#34;&gt;&lt;em&gt;Magnetic Levitation Propulsion: Theory and Engineering&lt;/em&gt;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;em&gt;Note: The paper was established from previous knowledge in electrodynamics and curiosity&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2&gt;&lt;/h2&gt;&#xA;&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;&#xA;&lt;p&gt;This document explores the theoretical and engineering foundations of an electromagnetic propulsion system using high-temperature superconductors (HTS) to enable vertical takeoff and sustained flight without relying on conventional aerodynamic or chemical rocket methods. It connects core electrodynamics—Maxwell’s equations, Faraday induction, Lorentz forces, and plasma physics—to the design of a disk-like craft that generates and controls strong magnetic fields through superconducting coils. The system interacts with ionized air (plasma) to produce thrust and lift, allowing the vehicle to hover, maneuver, and potentially transition to hypersonic flight. Key topics include HTS materials such as YBa₂Cu₃O₇₋ₓ, their critical temperatures, flux pinning, and current-carrying capacity; coil configurations and cryogenic cooling; power requirements on the order of megawatts to support the necessary plasma ionization and field strength; and methods of thrust vectoring and stability control via electromagnetic pressure and induced currents. While highly speculative, the analysis outlines how advances in materials science, nuclear-scale power sources, and control of magnetohydrodynamic flows could, in principle, make such a propulsion concept feasible.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="//localhost:1313/posts/magnetic-levitation-propulsion/">
+  <meta property="og:site_name" content="blog">
+  <meta property="og:title" content="Magnetic Levitation Propulsion">
+  <meta property="og:description" content="Magnetic Levitation Propulsion: Theory and Engineering Note: The paper was established from previous knowledge in electrodynamics and curiosity
+Abstract This document explores the theoretical and engineering foundations of an electromagnetic propulsion system using high-temperature superconductors (HTS) to enable vertical takeoff and sustained flight without relying on conventional aerodynamic or chemical rocket methods. It connects core electrodynamics—Maxwell’s equations, Faraday induction, Lorentz forces, and plasma physics—to the design of a disk-like craft that generates and controls strong magnetic fields through superconducting coils. The system interacts with ionized air (plasma) to produce thrust and lift, allowing the vehicle to hover, maneuver, and potentially transition to hypersonic flight. Key topics include HTS materials such as YBa₂Cu₃O₇₋ₓ, their critical temperatures, flux pinning, and current-carrying capacity; coil configurations and cryogenic cooling; power requirements on the order of megawatts to support the necessary plasma ionization and field strength; and methods of thrust vectoring and stability control via electromagnetic pressure and induced currents. While highly speculative, the analysis outlines how advances in materials science, nuclear-scale power sources, and control of magnetohydrodynamic flows could, in principle, make such a propulsion concept feasible.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-12T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-12T00:00:00+00:00">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Magnetic Levitation Propulsion">
+  <meta name="twitter:description" content="Magnetic Levitation Propulsion: Theory and Engineering Note: The paper was established from previous knowledge in electrodynamics and curiosity
+Abstract This document explores the theoretical and engineering foundations of an electromagnetic propulsion system using high-temperature superconductors (HTS) to enable vertical takeoff and sustained flight without relying on conventional aerodynamic or chemical rocket methods. It connects core electrodynamics—Maxwell’s equations, Faraday induction, Lorentz forces, and plasma physics—to the design of a disk-like craft that generates and controls strong magnetic fields through superconducting coils. The system interacts with ionized air (plasma) to produce thrust and lift, allowing the vehicle to hover, maneuver, and potentially transition to hypersonic flight. Key topics include HTS materials such as YBa₂Cu₃O₇₋ₓ, their critical temperatures, flux pinning, and current-carrying capacity; coil configurations and cryogenic cooling; power requirements on the order of megawatts to support the necessary plasma ionization and field strength; and methods of thrust vectoring and stability control via electromagnetic pressure and induced currents. While highly speculative, the analysis outlines how advances in materials science, nuclear-scale power sources, and control of magnetohydrodynamic flows could, in principle, make such a propulsion concept feasible.">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-6/all-6.4.2.js"></script>
+
+
+  
+  
+
+  <title>
+Magnetic Levitation Propulsion | blog
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+
+<script>
+    var prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", function showHeaderOnScroll() {
+        let profileHeaderElem = document.getElementById("profileHeader");
+        let currentScrollPos = window.pageYOffset;
+        let resetHeaderStyle = false;
+        let showNavBarOnScrollUp =  true ;
+        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+        if (showNavBar) {
+            profileHeaderElem.classList.add("showHeaderOnTop");
+        } else {
+            resetHeaderStyle = true;
+        }
+        if(currentScrollPos === 0) {
+            resetHeaderStyle = true;
+        }
+        if(resetHeaderStyle) {
+            profileHeaderElem.classList.remove("showHeaderOnTop");
+        }
+        prevScrollPos = currentScrollPos;
+    });
+</script>
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="//localhost:1313/">
+                
+                <img src="/fav.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                Hugo Profile
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Ctrl &#43; k to Search...'
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="//localhost:1313/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="//localhost:1313/#experience"
+                            aria-label="experience">
+                            Experience
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="//localhost:1313/#education"
+                            aria-label="education">
+                            Education
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="//localhost:1313/#projects"
+                            aria-label="projects">
+                            Projects
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="//localhost:1313/#achievements"
+                            aria-label="achievements">
+                            Achievements
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="//localhost:1313/#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/posts" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/gallery" title="Blog posts">
+                            
+                            Gallery
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">Magnetic Levitation Propulsion</h1>
+            <div class="text-center">
+              
+              Apr 12, 2025
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <article class="page-content  p-2">
+          <h1 id="magnetic-levitation-propulsion-theory-and-engineering"><em>Magnetic Levitation Propulsion: Theory and Engineering</em></h1>
+<p><em>Note: The paper was established from previous knowledge in electrodynamics and curiosity</em></p>
+<h2></h2>
+<h2 id="abstract">Abstract</h2>
+<p>This document explores the theoretical and engineering foundations of an electromagnetic propulsion system using high-temperature superconductors (HTS) to enable vertical takeoff and sustained flight without relying on conventional aerodynamic or chemical rocket methods. It connects core electrodynamics—Maxwell’s equations, Faraday induction, Lorentz forces, and plasma physics—to the design of a disk-like craft that generates and controls strong magnetic fields through superconducting coils. The system interacts with ionized air (plasma) to produce thrust and lift, allowing the vehicle to hover, maneuver, and potentially transition to hypersonic flight. Key topics include HTS materials such as YBa₂Cu₃O₇₋ₓ, their critical temperatures, flux pinning, and current-carrying capacity; coil configurations and cryogenic cooling; power requirements on the order of megawatts to support the necessary plasma ionization and field strength; and methods of thrust vectoring and stability control via electromagnetic pressure and induced currents. While highly speculative, the analysis outlines how advances in materials science, nuclear-scale power sources, and control of magnetohydrodynamic flows could, in principle, make such a propulsion concept feasible.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Magnetic levitation propulsion aims to produce lift and thrust without conventional aerodynamic or rocket systems, instead using electromagnetic forces. Recent advances in high-temperature superconductors (HTS) open possibilities for novel propulsion – a vision often associated with flying disks. In principle, a superconducting vehicle could generate intense magnetic fields and electric currents to interact with its environment, producing lift via electromagnetic induction or expelling ionized air for thrust. This report links classical electrodynamics theory (Maxwell’s equations, induction, AC circuits, wave dynamics) with the engineering of a speculative HTS-based levitating propulsion system. Establishing the theoretical foundations from Maxwell’s field equations and plasma physics, then examine how a HTS platform might achieve levitation and propulsion. Equations for electromagnetic fields, forces, and plasma behavior are included to model the mechanisms of lift and thrust. We also discuss specific HTS materials (YBa₂Cu₃O₇₋ₓ) – their critical temperature, magnetic flux exclusion, and current-carrying capacity – as they relate to propulsion. Finally, propose an engineering framework for a superconducting flying craft, including coil configurations, cryogenic cooling, and power requirements, and assess current technological limits. While highly speculative, this exploration identifies what advances in materials science and electromagnetics would be needed to make such a vehicle feasible.</p>
+<h2 id="theoretical-foundations-in-electrodynamics">Theoretical Foundations in Electrodynamics</h2>
+<h3 id="maxwells-equations-and-electromagnetic-fields"><em>Maxwell’s Equations and Electromagnetic Fields</em></h3>
+<p>Maxwell’s equations are the cornerstone of classical electrodynamics, describing how electric and magnetic fields are generated and related. In differential form, they are:</p>
+<p>1.) <strong>Gauss’s law:</strong> ∇·E = ρ/ε₀, indicating electric flux out of a volume equals the charge density inside.</p>
+<p>2.) <strong>Gauss’s law for magnetism:</strong> ∇·B = 0, implying no isolated magnetic monopoles and that magnetic field lines are continuous loops​.</p>
+<p>3.) <strong>Faraday’s law of induction:</strong> ∇×E = – ∂B/∂t, which states a time-varying magnetic field ∂B/∂t induces a curl in the electric field E​. In integral form, Faraday’s law says the electromotive force (EMF) around a loop equals the negative rate of change of magnetic flux through the loop​.</p>
+<p>4.) <strong>Ampère’s law with Maxwell’s addition:</strong> ∇×B = μ₀ J + μ₀ε₀ ∂E/∂t, meaning magnetic fields arise from electric currents J and also from time-varying electric fields​. These four equations, together with the Lorentz force law, form a complete description of classical electromagnetism.</p>
+<p>Maxwell’s equations predict that a changing electric field produces a magnetic field and vice versa. This coupling allows self-sustaining electromagnetic waves in a vacuum, with electric and magnetic fields oscillating together and propagating at the speed of light c=100. Solutions to Maxwell’s equations include plane electromagnetic waves, whose existence confirmed that light is an electromagnetic wave​. In the context of propulsion, Maxwell’s equations guide how we can generate and shape electromagnetic fields for lift. For example, a superconducting coil carrying current produces a magnetic field (via Ampère’s law), and if that field changes in time it induces electric fields and currents in nearby conductors (via Faraday’s law). These induced currents and fields can exert forces that potentially levitate the craft. The absence of magnetic monopoles (Gauss’s law for B) is also important. Field lines from the craft’s magnets must loop back, meaning any magnetic pressure or tension forces must involve interactions between field sources (such as the craft’s superconducting coils and the Earth or surrounding plasma).</p>
+<h3 id="electromagnetic-induction-and-ac-field-dynamics"><em>Electromagnetic Induction and AC Field Dynamics</em></h3>
+<p>A core principle for levitation is electromagnetic induction. Faraday’s law formally states that the line integral of the electric field around a closed loop equals –dΦ_B/dt, the negative time derivative of magnetic flux through the loop​. In practical terms, a changing magnetic flux induces an electromotive force (EMF) and hence an electric current in a conductor. Lenz’s law dictates the direction of the induced current: it flows such that its own magnetic field opposes the change in flux. This opposition produces forces – for instance, a conducting loop will repel a magnet falling toward it because the increasing flux induces currents that create a counter-field. Induction underlies many levitation demonstrations and is essential for AC-driven lift systems. In a KAIST lecture example, moving a conducting loop in a steady field or changing the field through a stationary loop both produce an EMF proportional to the flux. Even if the loop is stationary. This principle is harnessed in magnetic levitation: eddy currents induced in a conductive track by an oscillating magnet can produce a repulsive force that lifts the magnet. Similarly, if our superconducting craft carries an AC coil, its oscillating field could induce currents in a nearby metallic surface (like a launch pad or ground coil), resulting in repulsion (analogous to an inductive levitation system or transformer coupling).</p>
+<p>Since induced currents oppose flux changes, they inherently provide a stabilizing, lifting force in configurations like a magnet above a conductive plate. For maximum effect, AC circuits are often used to sustain oscillating fields. An alternating current in a coil produces a continuously changing magnetic field, which can induce strong eddy currents in nearby conductors. The frequency and amplitude of the AC can be tuned to optimize levitation. In a simple model, the induced current Iind in a metal plate beneath a coil is proportional to the rate of change of flux and the plate’s conductivity. The resulting magnetic force between the coil and induced currents can levitate the coil if the AC frequency is high enough to confine currents near the surface (skin effect) and provide a restoring force against motion. This is the concept behind induction levitation melting, where metal pieces are levitated by high-frequency magnetic fields. A superconducting propulsion system might exploit similar induction. For example, when near a conductive ground, the craft’s coils could drive eddy currents in the ground to produce lift. (However, note that as altitude increases, this effect weakens rapidly with distance – suggesting that purely inductive lift requires either an induced current in a nearby infrastructure or very large loop areas). The physics of AC circuits also enters in designing the onboard coil systems. To drive large oscillating currents through a superconducting coil (which has essentially zero DC resistance), one must consider the coil’s inductance L and any circuit capacitances. A resonance at frequency fo=12LC could be used to circulate large currents with minimal external power dissipation. Indeed, a superconducting coil could form part of a high-Q LC resonator to generate strong AC magnetic fields for induction or plasma excitation. The wave solutions of Maxwell’s equations become relevant if these AC frequencies are in the radiofrequency or microwave range. The fields may propagate as waves away from the craft. Containing or directing these electromagnetic waves (for instance, using resonant cavities or antenna structures) would be important to maximize thrust efficiency and avoid unwanted radiation.</p>
+<h3 id="lorentz-force-and-electromagnetic-pressure">Lorentz Force and Electromagnetic Pressure</h3>
+<p>While Maxwell’s equations describe field generation, the Lorentz force law describes how fields exert force on matter. A charge q in an electric field E and magnetic field B experiences a force F = q(E+vB) where v is the particle’s velocity. The E field accelerates charges directly, while the B field deflects moving charges (a magnetic force perpendicular to both v and B). In a continuous medium like a conductor or plasma, the force density can be written f=E+JB, where  is charge density and J current density. For a neutral conducting fluid (plasma), 0 and f= JB, the JB force. This is the key to electromagnetic propulsion. Yet, if it can drive a current J through a plasma (or within a superconductor) in the presence of a magnetic field, a force results. In a magnetohydrodynamic (MHD) thruster concept, ions in the airflow are accelerated by electric fields (creating a current through the plasma) while a perpendicular magnetic field (from superconducting magnets) produces a JB force that pushes the plasma (and imparts opposite force on the craft). We will explore this mechanism in the propulsion design.</p>
+<p>Electromagnetic fields also carry momentum and pressure. Even in vacuum, an electromagnetic field has an energy density u=0E22+B220and an associated pressure on surfaces. A strong magnetic field, in particular, exerts an outward pressure of magnitude PB=B220. Physically, magnetic field lines behave like “mutually repulsive elastic bands”​– they tend to push apart to maximize their spacing. If a superconductor or magnetic structure alters the field configuration (for example, expelling field lines), it experiences a reaction force due to this magnetic pressure difference. The Maxwell stress tensor formalism shows that the force on a surface can be computed from the difference in electromagnetic field pressure across it. For instance, consider a small magnet above a superconducting surface: the superconductor expels nearly all magnetic flux from its interior (Meissner state), so just inside the superconductor B0, whereas above the surface B may be substantial in the gap between magnet and superconductor. The result is a pressure B220 pushing the magnet and superconductor apart. In general, the vertical force can be found by integrating the z-component of the Maxwell stress tensor Tzz=120(Bt2-Bn2) over a surface​ (where Bn2 and Bt2 are normal and tangential field components). A large field gradient or discontinuity thus yields a net force. This is how even static DC fields can produce lift in a magnetic levitation setup. For example, a 1 Tesla field impinging on a perfect diamagnet (superconductor) results in a pressure on the order of 0.4 MPa (about 4 atmospheres)​, which can support significant weight if applied over a sufficient area.</p>
+<p>The concept of plasma oscillations is another fundamental piece, relevant if the propulsion system ionizes air into plasma. A plasma supports its own collective motion: electrons can oscillate about their equilibrium positions with a characteristic plasma frequency p. This is given by p=nee20me​, where ne is electron number density, -e the electron charge, and me the electron mass. Physically, if electrons are displaced (with heavy ions as a stationary background), the electrostatic restoring force causes them to slosh back and forth at frequency p. For example, a fully ionized air plasma at atmospheric density has an extremely high p(far above microwave frequencies), whereas a tenuously ionized plasma or ionospheric plasma has p in the kHz–MHz range. Plasma oscillations matter for our craft in two ways: They define a cutoff frequency for electromagnetic wave propagation – an EM wave below p cannot propagate through the plasma and is reflected. Thus, if the craft uses microwave radiation to sustain a plasma or for communication, the plasma frequency of the surrounding ionized air must be considered. Coupling to plasma oscillations might provide additional thrust mechanisms: for instance, launching plasma waves (Alfvén waves, magnetosonic waves) into an ionized air flow could transfer momentum to the plasma more efficiently. In general, however, for thrust we will rely on steady-state or slowly varying plasma flow (MHD forces) rather than high-frequency plasma oscillations, since the latter average out over time. Still, the plasma frequency is a useful design parameter. For instance, the microwave thruster discussed later operates at 2.45 GHz, which is well above the plasma frequency of the partially ionized air it creates, ensuring the microwaves penetrate and energize the plasma​.</p>
+<h3 id="ac-circuits-waveguides-and-resonance-considerations"><em>AC Circuits, Waveguides, and Resonance Considerations</em></h3>
+<p>Since, the envisioned propulsion system may use high-frequency currents and fields (for induction or for creating plasma with microwaves), a brief note on AC circuitry is warranted. Superconductors have <em>zero DC resistance</em>, but they can exhibit impedance for AC currents due to self-inductance and since oscillating magnetic fields cause flux penetration and losses (especially in type-II superconductors where flux vortices can move unless pinned strongly). Any superconducting coil will have an inductance L; driving it with AC requires an AC source or a resonant tank circuit. At high frequency, the displacement current term in Maxwell’s equations (the <strong>00Et</strong>part) becomes significant, meaning the fields will radiate if not confined. Thus, parts of the propulsion system might operate as a high-power microwave source (if using microwaves to ionize air) and need waveguide or cavity structures to direct energy into the working fluid rather than freely radiating. This essentially merges the domains of circuit theory and wave propagation – the superconducting coil could double as an antenna or resonator.</p>
+<p>One practical example is the concept of a microwave resonant cavity thruster. The idea is to pump microwave energy into a cavity to produce thrust; while the controversial “EM Drive” is unproven, a more grounded approach is a microwave electrothermal thruster (like NASA’s MET concept) where a cavity filled with gas is energized by microwaves to heat and expel the gas​. In our context, a superconducting magnet can serve as a magnetic nozzle to channel plasma flow, as demonstrated in NASA designs using a 6 T superconducting solenoid to shape the exhaust of a microwave plasma thruster​. High-frequency AC design ensures efficient energy transfer: by operating at resonance, the system can store oscillating energy with minimal resistive loss. The quality factor Q is a superconducting resonator that can be extremely high (since resistive losses are near zero), which is advantageous for building up large oscillating fields. The downside is that any coupling to a plasma (which is resistive or radiative) will introduce losses and lower the effective Q. Nonetheless, careful design of AC circuits and waveguides is critical in maximizing thrust-to-power ratio, especially if relying on beamed power or onboard electric energy to generate the fields.</p>
+<p>In summary, classical electrodynamics provides the necessary toolkit. Maxwell’s equations tell us how to generate and shape fields, Faraday’s law and induction explain how changing fields produce forces and currents, and the Lorentz force plus field pressure explains how those fields push on materials and plasma. These principles will now be applied to the specific context of superconductors and levitation.</p>
+<h2 id="materials-analysis-high-temperature-superconductors-and-flux-pinning">Materials Analysis (High-Temperature Superconductors and Flux Pinning)</h2>
+<p>High-temperature superconductors (HTS) such as YBa₂Cu₃O₇₋ₓ (YBCO) and rare-earth barium copper oxide (REBCO) are the enabling materials for this magnetic propulsion system. These ceramic HTS tapes can carry extremely high current densities (on the order of kiloamps per mm²) with effectively zero DC electrical resistance​. For example, MIT’s SPARC fusion project demonstrated a compact HTS magnet reaching 20 teslas, corresponding to a colossal magnetic pressure of ~160 MPa (about 16 atmospheres). Even a 1–2 T field—plausible for a vehicle-sized coil—yields pressures of ~0.4–1.6 MPa​. By comparison, levitating a 10,000 kg craft (∼100 kN weight) over 20 m² needs only ~0.005 MPa of upward pressure​. This shows that, in principle, HTS magnets can generate ample field intensity to lift a heavy craft, given a way to apply that pressure as lift​.</p>
+<p>Key attributes of YBCO/REBCO for propulsion include:</p>
+<p><strong>Zero Electrical Resistance:</strong> A closed superconducting loop can carry persistent current without Ohmic loss​. Once charged, an HTS coil sustains the magnetic field with no input power except for cryogenic cooling. This means a magnetically levitated craft could maintain a “lift field” continuously without consuming electrical energy (aside from refrigeration).</p>
+<p><strong>High Current Density:</strong> HTS coils pack a lot of amperage into a small volume, producing strong magnetic flux. Compact YBCO disks have even demonstrated magnet levitation via flux pinning (a 14 mm YBCO disk can trap a field and stably levitate a magnet)​. For a vehicle, arrays of such coils can be arranged to shape and stabilize the overall field​.</p>
+<p><strong>Magnetic Flux Pinning (Quantum Locking):</strong> YBCO and other Type II superconductors allow magnetic flux to penetrate in quantized vortices that lock in place relative to the material (the phenomenon of flux pinning)​. This yields inherently stable levitation – a superconducting puck can float at fixed distance and orientation above a magnet (often called quantum levitation)​. A disk-style vehicle could use flux pinning for passive stability if there were a fixed external field to pin to​. However, in free flight there is no large external magnet; unless multiple craft fly in formation to pin to each other’s fields, flux pinning mainly aids intra-vehicle field stability rather than directly “locking” the craft in space​.</p>
+<p><strong>Cryogenic Operation:</strong> HTS materials must be cooled well below room temperature (typically 20–80 K for YBCO). Onboard cryocooler units (Stirling or Gifford-McMahon coolers) can reliably reach 50–70 K​. Modern cryocoolers, as used in satellites, can provide tens of watts of cooling at 70 K but require on the order of a kilowatt of input power for each 10–20 W of heat lifted​. Fortunately, a large vehicle with a multi-megawatt power plant can allocate a few kW for cooling – a manageable overhead​. The superconducting coils would likely be housed in a vacuum-insulated cryostat around the craft’s perimeter​, with distributed cryocoolers (and backup units for redundancy) keeping them below the critical temperature​. Robust cryogenic design is essential: loss of cooling could force a magnet shutdown, and any transition back to normal resistive state (a “quench”) must be detected and current safely diverted to avoid coil damage​.</p>
+<p><strong>Mechanical and Thermal Limits:</strong> The coils must withstand enormous electromagnetic forces. A multi-tesla magnetic field tries to expand or distort the coil (hoop stress). Advanced composite reinforcement (similar to that in MRI/fusion magnets) is required to prevent structural failure​. If an HTS coil carrying thousands of amps suddenly went normal, resistive heating would spike rapidly, so quench protection circuits (detectors and energy dump resistors) are included to harmlessly dissipate the energy​. Thermal insulation is also critical because in high-speed flight the exterior may heat to hundreds or thousands of degrees, while just a few centimeters away the coil windings must stay at ~70 K. The craft’s structure would contain multilayer thermal insulation and active cooling to keep the superconductors cold under all operating conditions.</p>
+<p>In summary, REBCO/YBCO superconductors are the foundation for this propulsion system, providing strong steady currents and magnetic fields unattainable with normal conductors. They enable magnetic pressures orders of magnitude beyond what is needed for lift​. With proper cryogenic support and structural reinforcement, HTS coils can operate in an aerospace environment. This concept leverages the same technologies proven in maglev trains and fusion experiments, now applied to a flying vehicle​.</p>
+<h2 id="engineering-solenoid-design-prototype-vs-full-scale">Engineering Solenoid Design (Prototype vs. Full-Scale)</h2>
+<p><strong>Coil Configuration:</strong> The craft’s electromagnets will likely be arranged in a toroidal fashion encircling the disk’s rim​. In the baseline design, a single large superconducting coil runs around the perimeter of the saucer (forming a loop or “halo” within the rim) to produce a predominantly vertical magnetic field through the craft’s underside​. This primary lift coil creates the field that will interact with plasma currents for lift and thrust. In practice, multiple coils may be used rather than one gigantic loop: a set of segmented pancake coils stacked to form a composite torus​, or a primary coil plus smaller trim coils for stability​. All coils are enclosed in a ring-shaped cryostat around the craft’s edges​, kept at ~70 K by cryocoolers spaced around the circumference​.</p>
+<p><strong>Solenoid Parameters:</strong> To estimate coil requirements, we can use Ampère’s law. For a circular loop of radius R, the on-axis magnetic field at the center is <strong>B0NI2R</strong> (for R large compared to coil thickness). Here <strong>NI</strong> is the total ampere-turns. A full-scale 10–20 m craft might have R5 m; achieving, say, B=1 T along the axis would require on the order of <strong>NI2R08106</strong> ampere-turns. This could be, for example, 8104 A flowing through 100 turns, or 20,000 A through 400 turns, etc. Such figures are high but within the realm of HTS technology – modern REBCO coils can carry tens of kA, and by using many layers (“pancake” winding) the required ampere-turns can be distributed​. (For comparison, the ∼20 T SPARC magnet used ~10⁵ A-turns per coil layer, with multiple layers in series​.) A smaller prototype of 1–2 m diameter (<strong>R0.5</strong> m) is easier: 1 T on-axis requires ~0.8106 A-turns, which could be, for instance, 4,000 A through 200 turns. This is achievable with a compact HTS winding (200 turns of HTS tape carrying 4 kA). In both cases, fields of a few teslas in the vehicle’s vicinity are plausible. We assume the coil cross-sections are sized to keep the magnetic flux density in the superconductor below its critical field and current (to avoid quench).</p>
+<p><strong>Coil Placement &amp; Field Geometry:</strong> The primary HTS coil is placed near the rim of the disc to maximize leverage against the craft’s mass (creating a wide “magnetic footing”) and to produce a vertical B-field through the disk’s center​. This field will extend below the craft into the surrounding air. The field topology can be adjusted by the coil geometry. For example, a flat spiral coil embedded in the bottom of the craft would produce a mostly vertical field directly beneath it (similar to a solenoid facing downward), whereas a ring torus coil around the edge produces a more complex field that arches across the underside. For lift, the goal is a field configuration that yields an upward Lorentz force (JB) on the plasma and thus an upward reaction force on the craft. One straightforward approach is to generate a vertical magnetic field and drive a radial current through the plasma; the resulting JB force is vertical (as we derive in the next section)​. This can be achieved with a flat coil producing Bzand electrodes creating an outward Jr. Alternatively, one can create a toroidal magnetic field (field lines loop horizontally around the axis, like a smoke ring shape) and drive a poloidal current (vertical through the plasma); in that case JB also gives an axial force​. The craft’s design may combine these: for instance, a primary toroidal coil gives a baseline vertical field, and smaller coils or magnetic shaping elements add radial or azimuthal components to fine-tune the net force direction.</p>
+<p>Importantly, the coil system is not limited to producing lift; by shaping the field it can also provide stability and control. Multiple smaller coils (trim or vectoring coils) can be placed at strategic locations – say, quadrants around the disc or top/bottom – to adjust the field symmetry. Energizing certain coils more than others can concentrate the magnetic flux on one side or create a tilt in the field lines, which enables thrust vectoring (discussed later). The coil assembly must also accommodate the craft’s internal layout. In the full-scale design, the superconducting magnet coils are likely housed in a thick ring around the outer edge (to leave room for a crew compartment or payload in the center)​. In a prototype, the entire interior might be available for power and support systems, allowing a larger coil cross-section if needed.</p>
+<p><strong>Magnetic Field Strength and Pressure:</strong> A well-designed coil produces a concentrated field under the craft. The magnetic pressure associated with a field B is PB=B220​. Even a sub-tesla field yields significant pressure: for instance, B=0.5 T gives PB0.1 MPa, and over a 10 m diameter (≈78.5 m² area) that idealized field could generate <strong>F=PB</strong>– equivalent to lifting ~800 tons. In reality, the field would not be uniform and would bulge outward, reducing effective pressure​. Yet, this calculation shows the raw potential: magnetic fields of order 1 T can easily produce pressures far above the ~0.005–0.02 MPa needed to support typical craft weights​. The engineering challenge is containing and directing that pressure. The coils themselves feel immense outward forces (trying to expand the loop), so they must be structurally reinforced. In our design, the HTS coils are embedded in a composite structure to withstand these forces​. Magnetic pressure will also act on the plasma beneath the craft, as well as any conductive surfaces nearby (via induced currents). This is harnessed for thrust, but it means the field can push on the craft’s own hull or internal components if not properly shielded. Typically, a Faraday-cage or μ-metal layer would line the crew compartment to protect occupants and electronics from strong fields​.</p>
+<p><strong>Lorentz Force on Plasma:</strong> The reason for generating such strong fields is to interact with plasma currents for propulsion. If a plasma current J flows under the craft and the coil produces a magnetic field B. The plasma experiences a force per volume f=JB. We will delve into the physics in Section 3, but from a coil design perspective, one must ensure the field has the correct orientation. For example, if the field were purely vertical (Bz) and the plasma current purely radial (Jr), at every point JB would be directed azimuthally (around in a circle), which tends to make the plasma swirl rather than lift​. A purely tangential force on the plasma doesn’t directly lift the vehicle (though a circulating plasma might create a pressure differential). To get an upward force, some component of J must be perpendicular to B in such a way that JB points up. In practice, engineers can arrange electrode geometries to drive currents that, together with the coil’s field, produce an upward net thrust. One concept is a central cathode and a ring anode at the rim: this drives a radial current through an ionized air “disc” beneath the craft​. If the coil’s field is mostly vertical in that region, the lower portion of the JB force has an upward component. Another concept (akin to a magnetoplasmadynamic thruster) is to create a current loop in the plasma that has a vertical segment through the field, producing direct axial thrust. In short, the coil design goes hand-in-hand with the electrode/plasma design to ensure the geometry of J and B yields lift rather than just torque or sideways forces. This will be quantified next.</p>
+<h2 id="electrodynamic-propulsion-physics-maxwells-equations-and-lorentz-force">Electrodynamic Propulsion Physics (Maxwell’s Equations and Lorentz Force)</h2>
+<p>Suppose the craft creates a horizontal current flowing radially outward through the plasma beneath it (from the center toward the rim). Denote this current density as Jr (pointing outward). The HTS coil produces a magnetic field Bz pointing <em>downward</em> through this region (we take downward as negative z). The JB force density is then <strong>f=JrBz</strong> in the azimuthal direction  <strong>hat</strong> (around the disc). This azimuthal force makes the plasma swirl around but provides no lift directly​. Now, if the field is not purely vertical everywhere – say the field lines curve outward near the rim – then at the outer parts of the plasma the <strong>JrB</strong> may acquire an upward component. However, a more direct way is to reorient the current. If we drive a current vertically (along z) through a radial magnetic field, or drive a radial current through a vertical magnetic field, the resulting JB points vertically​. For example, consider a circular current sheet in the plasma (azimuthal J flowing around like a ring) combined with a radial magnetic field emanating outward; the <strong>JBr</strong> force is upward along the axis (this is analogous to how a homopolar motor lifts if magnetic field and current disk are perpendicular). In practice, designs like an MPD (magnetoplasmadynamic) thruster use a central electrode (cathode) and outer anode to drive plasma axially outwards via such forces​. The craft operates on the same principle but in ambient air: it ionizes the air and drives it electrically, so that electromagnetic forces accelerate the air downward (expelling a plasma exhaust) to generate lift​.</p>
+<p>Another way to view the lift is via the Maxwell stress tensor. The electromagnetic field carries momentum and exerts pressure on any material boundaries. A strong magnetic field has energy density <strong>u=0E2+B220</strong> and pressure PB=B220 in vacuum​. If the craft simply generated an intense magnetic field below it and a field-free cavity inside it, there would be a pressure differential pushing up on the craft (like a magnetic cushion)​. In fact, small magnets can be levitated over superconductors by this static field pressure: the superconductor expels flux (Meissner effect), so just above it B is high and just inside it B0, creating an upward pressure PB220 that balances the magnet’s weight​. However, a free-flying vehicle cannot count on an external superconductor or mirror field – it would have to carry both sides of the field with it​. There is no “ground” to push against at 60,000 ft altitude. Thus, purely static magnetic levitation (like a magnet hovering over a track) won’t work in open air​. Instead, our vehicle pushes against a mass of air. By accelerating air/plasma downward (using JB forces), the craft gets an upward reaction force. In essence, it replaces a physical propeller or rocket exhaust with a volume force on plasma. This satisfies momentum conservation and does not violate any physics (it’s firmly in the realm of Maxwell and Newton). As one review concluded, each piece of this concept (superconducting magnets, plasma drives, etc.) is well-established. Such a propulsion scheme does not violate known laws, but combining them at scale is the challenge.</p>
+<p><strong>Thrust Vector Control via Field Modulation:</strong> The pilot can control thrust magnitude and direction by varying the electromagnetic parameters. Increasing the coil current or the plasma current raises the JB force (throttle up the thrust). If the pilot wants to vector the thrust (tilt the craft or move laterally), they can deliberately unbalance the fields/currents. For example, by strengthening the magnetic field on one side of the vehicle (using trim coils) or injecting more plasma current on one side, the force on that side increases, tilting the net thrust vector opposite to that side. The craft’s coil system could be segmented into quadrants or sectors that can be differentially energized to direct the plasma push in a particular direction. Additionally, if the magnetic coils are driven with AC phase shifts, it’s possible to create a rotating or asymmetric field that “steers” the plasma flow. In concept, this is similar to how multi-phase stator coils can produce a rotating magnetic field in an electric motor. Here, phase-tuning the currents could sweep the region of strongest JB around, enabling fine control of pitch, roll, and yaw without any movable surfaces. The response would be almost instantaneous, limited only by the inductance of the coils and the plasma’s inertia. A feedback control system (analogous to fly-by-wire) would monitor the craft’s orientation and adjust coil currents on the fly to maintain stability. Notably, a superconducting coil has negligible inductive voltage drop for DC, but if we change its current quickly, voltages and AC losses will appear – so there is a trade-off in how fast we can modulate the main fields. It’s likely that small auxiliary electromagnets (normal-conducting or fast-response HTS coils) are dedicated to rapid adjustments and stabilization, while the main HTS coil provides the steady baseline field. In summary, electromagnetic vectoring can replace gimbaled thrusters: by dynamically reshaping the field, the craft’s thrust can be directed in any orientation without mechanical parts.</p>
+<p><strong>Plasma Generation and MHD Control:</strong> The vehicle must create and sustain the plasma (ionized air) that carries the current. Air is normally an insulator, so it takes energy to ionize. Several methods can be employed individually or in combination​</p>
+<p>High-voltage discharge: A strong electric field can rip electrons off air molecules. The craft can use a network of electrodes ( a central electrode and ring electrode) to create a corona discharge or arc, seeding a plasma between them​. This is analogous to how “lifters” or ion thrusters ionize air using high voltage, or how a stun gun generates plasma channels. Once the arc forms, current flows through the ionized path.</p>
+<p>Microwave/RF ionization: By directing microwave or RF energy into the air (for instance, via a microwave cavity or antenna under the craft), the air can be ionized uniformly​. Patents by Pais and others describe using high-frequency electromagnetic waves to create a plasma sheath around a craft. Essentially, a high-power microwave source can break down the air at high altitudes or in front of a shock. This method can ionize a volume of air without electrodes, and also pre-heats/expands the air which might augment thrust.</p>
+<p>Electron beam injection: A cathode gun can shoot energetic electrons into the air​. These free electrons collide with neutral molecules, ionizing them (similar to how an electron beam in a CRT ionizes residual gas). An electron beam can produce a plasma column from a distance and doesn’t require as high a voltage as a full arc – it “sprays” charge into the air which can then be collected by an anode.</p>
+<p>Laser ionization: A pulsed laser can be used to create a filament of plasma in air via dielectric breakdown​. This technique is used in laboratory experiments (and even considered for triggering lightning). A UV or infrared laser focused under the craft could draw a conducting line through the air, along which current can then be driven.</p>
+<p>In our system, a hybrid approach is likely. For example, the craft could first use a microwave discharge to create a general diffuse plasma in the volume under the saucer, reducing the breakdown voltage. Then, embedded electrodes (perhaps a central electrode at the belly and the rim of the craft as the other electrode) apply a DC or low-frequency AC bias to drive an actual current through this plasma​. The result would be a large, pancake-shaped current sheet of ions/electrons flowing outward or circularly under the craft. This current interacts with the magnet’s B-field to produce lift. Additional plasma injectors around the edges might be used to ensure the plasma extends over the full underside area or to provide ionization in the direction of travel (for propulsion forward at high speeds).</p>
+<p>Controlling the plasma involves regulating the ionization level and the current path. The craft’s power electronics would adjust the voltage on the electrodes to control plasma current J (much like a power supply driving an arc discharge). Too little ionization and the air remains non-conductive (no current flows); too much, and energy is wasted or the plasma could detach. The ideal is a stable plasma of just the right density to carry the desired current. Magnetically, the plasma can also be “shaped” to some extent: the applied B-field can help confine the plasma or alter its distribution (this veers into magnetohydrodynamics (MHD), where the plasma’s motion and the field interact). At high speeds, the incoming air is pre-ionized by compression shocks (plasma already present), so the craft in that regime might reduce its own ionization power and simply use the natural plasma. At low speeds or hover, the craft must actively ionize air to create a plasma pillow to push against.</p>
+<p>A side effect to consider: the plasma under the craft will emit light (it may glow purple/blue from nitrogen ions or orange if air is extremely heated). Indeed, in some conceptual illustrations a glowing corona or plasma “aura” is depicted around disk-like craft​. This is consistent with our design – a byproduct of generating lift is a bright plasma discharge, especially at lower altitudes. In stealth applications this would be a drawback (visible and radio-frequency emissions), but for a test vehicle it’s expected.</p>
+<p><strong>MHD Flow Dynamics:</strong> When the craft is in motion, the plasma and electromagnetic system can also serve as an aerodynamic control. At hypersonic speeds (Mach 10+), the vehicle will be enveloped in a plasma from air compression heating​. A strong magnetic field on the craft will interact with this plasma – for example, it can deflect or expand the plasma around the vehicle. This can alter the shock shape and reduce aerodynamic drag and heating, effectively acting as an electromagnetic heat shield​. By adjusting the field, the craft could modulate pressure on different areas of its body for additional lift or control (similar to plasma actuators tested on supersonic craft that manipulate airflow)​. In extreme scenarios, a vehicle might surround itself with a “magnetoplasma bubble” that pushes aside airflow, analogous to a magnetic parachute or an air-spike that reduces drag. These effects mean that at high altitude and high speed, the craft gains aerodynamic lift to complement electromagnetic thrust. Indeed, as airspeed increases, ionization becomes easier (ram air heating ionizes it, and the required power to sustain plasma decreases)​. Above roughly Mach 12, the air might even stay ionized on its own once seeded​, so the craft can to some extent “ride” its own plasma sheath. However, these are advanced regimes; the core propulsion mechanism from hover to transonic is still the active electromagnetic drive.</p>
+<p>In summary, electrodynamic propulsion works by creating a coupling between electricity, magnetism, and fluid dynamics. The vehicle ionizes the air (electric field work), drives currents through it (electric current), and uses magnetic fields to push on those currents (Lorentz force), thereby expelling mass for thrust. This concept is validated by decades of research into ion propulsion and MHD drives – it’s basically a scaled-up, high-power version of an ion thruster or an electromagnetic pump, applied to atmospheric flight​.</p>
+<h3 id="environmental-and-power-considerations"><em>Environmental and Power Considerations</em></h3>
+<p><strong>Power Requirements:</strong> A major challenge for this system is the enormous power needed to generate and sustain the fields and plasma. In hover, the craft must output power on the order of <strong>P=Fvthrust</strong> (thrust times exhaust velocity) to lift its weight. For example, lifting a 10-ton (98 kN) craft with an exhaust plasma velocity of ~1 km/s requires ∼100 MW of power​. If it had to do this for 10 hours, that’s on the order of <strong>100 MW36000s=3.61012J</strong> (for perspective, ~1000 kg of hydrocarbon fuel has ~41010 J, so it’s like burning dozens of tons of fuel). Clearly, chemical fuel isn’t sufficient. The full-scale disk-craft needs a high-density energy source – the most plausible being a compact nuclear fission reactor​. A fast spectrum or molten-salt reactor in the few tens of MW class, weighing a few tonnes, could fit within the craft’s center​. (For instance, DARPA’s recent small reactor concepts aim for 1–10 MW outputs in portable packages.) Even then, 5–10 MW may fall short of the 100 MW desired for peak thrust, so the craft might operate at lower thrust or use some form of energy storage to provide bursts. Another option studied is <em>beamed energy</em> (transmitting power via laser or microwave from a ground station)​, but for 100 MW at long range this is far beyond current capability​. Therefore, we assume an onboard power plant, likely nuclear. The reactor (or other source) would generate heat, which drives either a direct electric conversion (thermionic, turbine-generator, etc.) to supply multi-megawatt electrical power to the coils and plasma generators. In our schematic (Figure 1) the reactor core is shown at the center, with a toroidal shape wrapping around the crew compartment – this could represent, for example, a donut-shaped fusion reactor or a fission reactor with a circular radiator. The exact technology is speculative, but the power density must be extremely high for the concept to work.</p>
+<p>For a small prototype (1–2 m), the power requirements scale down with thrust. A 100 kg test drone needs roughly 1 kN of thrust to hover, which at 500 m/s exhaust speed is about 0.5 MW. This is still huge for a battery or engine. In practice, prototypes might be tethered to a ground power supply or operate in short spurts. Alternatively, one could envision a smaller (perhaps &lt;100 kW) prototype that works in a laboratory environment by using lighter gas or lower thrust just to demonstrate lift. The Wingless Electromagnetic Air Vehicle (WEAV) developed at the University of Florida, for instance, uses dielectric barrier discharge to lift a small craft at low thrust, running on tens of kilovolts but relatively low power​. Our HTS maglev craft is far more powerful, so initial tests might involve partial lifts or augmented buoyancy to reduce power needs. Ultimately, though, bridging the gap from a few MW (possible with, say, a turbine generator or lithium battery feeding a superconducting coil for seconds) to hundreds of MW continuous (requiring a reactor) is a critical development step​.</p>
+<p><strong>Altitude and Ambient Pressure:</strong> The performance of the electromagnetic thruster depends on the atmosphere. At sea-level dense air, there is plenty of mass to push against – each cubic meter of air is ~1.2 kg. This means the craft doesn’t need to accelerate a huge volume of air to get thrust, which is good. However, dense air also causes more drag on the craft and more heating at high speed, and it takes more energy to ionize due to frequent collisions causing recombination. There is also a risk of electrical breakdown along unintended paths because the air is highly insulating until a threshold, then forms filamentary arcs (lightning-like) once breakdown occurs. Techniques like microwave ionization help create a more diffuse plasma to avoid sparking. As the craft ascends to higher altitude, air density drops exponentially. By ~18 km (60,000 ft, typical “near-space” operating altitude), air density is ~1/10 of sea level. The craft needs to entrain a larger volume of air to produce the same thrust, or accelerate the available air to higher exhaust velocity. This tends to increase power demand at high altitude for hover. In contraband, when moving at high speed, lower density is beneficial (less drag). Our vehicle is envisioned to transition to primarily aerodynamic/MHD lift at high speeds​. In level flight at 60,000 ft and Mach 10+, the craft might use a combination of body lift (due to its disk shape and plasma pressure differentials) and electromagnetic augmentation, rather than pure hovering. If it tried to hover stationary at that altitude, it would need to continuously ionize a huge volume of thin air or carry propellant to eject – likely inefficient. Thus, the vehicle would perform a VTOL hover at lower altitudes, then switch to a fast-moving regime for high altitude flight, leveraging its speed to help generate lift.</p>
+<p>Another environmental factor is that ionizing air becomes <em>easier</em> at very high altitudes in one sense: the breakdown voltage drops as pressure drops (up to a point, per Paschen’s law) because the mean free path of electrons increases. This means an electron can gain more energy between collisions and is more likely to ionize upon collision. There is an optimum pressure for minimum breakdown voltage – too low, and there are simply not enough molecules to collide with. Around altitudes of 10–20 km, the craft’s plasma generation might actually be more effective than at sea level, given a strong electric field. At extremely high altitudes (near the edge of space, &lt;1 mbar pressure), sustaining a plasma becomes difficult – the air becomes almost like a vacuum, so any ions just drift away. At that point the craft would need to operate more like an ion thruster (carrying its own reaction mass, injecting a puff of argon or xenon gas to ionize). However, our focus is within the atmosphere (up to the stratopause). The ionization process also heats the air, which could help create additional lift (hot air expands, lowering density above the craft and increasing pressure below). Some concepts call this “plasma buoyancy” or thermodynamic lift assist. The downside is that all the energy ends up as heat eventually – meaning the craft and surrounding air will warm up. Managing waste heat is a huge issue: if the craft is expanding tens of MW, a significant fraction will become heat in the plasma and equipment.</p>
+<p><strong>Thermal Management:</strong> All input power ultimately goes somewhere – much into accelerating air (which is fine, that becomes kinetic energy of the exhaust), but some into heat in the electronics, magnets, and plasma. Even superconducting magnets can have AC losses if cycled​. Suppose 100 MW is used and 10% is lost as heat in systems – that’s 10 MW of heat to dump. The craft’s surface area (say 10 m diameter disk ~80 m² top + bottom) can radiate only a few MW as infrared if it’s extremely hot (red-hot ~1000 K). Active cooling might be needed. One idea is to use some of the intake air to cool critical components (regenerative cooling, like how a rocket engine uses fuel to cool the nozzle)​. The craft could ingest air, pass it through heat exchangers to cool the reactor and magnets, then ionize and expel that same air as plasma. This way, the waste heat is carried away in the exhaust. The vehicle likely also has thermal radiators (which might double as the outer hull) to shed heat during cruise when air cooling is insufficient. The high-temperature superconductors themselves have negligible resistive heating in steady DC operation, but if we modulate them or if the field environment changes rapidly (when maneuvering), AC hysteresis losses will occur in the superconducting tape​. To minimize this, the HTS coils can be made of fine filamentary windings (many thin strands) and operated mostly in DC or slowly varying current. In summary, managing heat is as important as managing power – the craft is essentially an all-electric vehicle that must handle power levels more typical of a naval warship or power plant, packaged into an aircraft.</p>
+<p><strong>Effects of Earth’s Magnetic Field:</strong> One subtle point – a large superconducting coil will interact with Earth’s geomagnetic field (∼50 μT at the surface). A single-loop coil acts like a magnetic dipole. If the craft’s coil is generating (for example) 1 T internally, its dipole moment could be enormous and it might experience a torque trying to align with Earth’s field, similar to how a compass needle orients. However, the force from Earth’s field is tiny compared to the coil’s own structural forces. The craft’s control system can easily counter any slow drift caused by Earth’s field. The onboard guidance could even use magnetometers to sense orientation relative to Earth’s field for navigation. Additionally, the craft might <em>create</em> magnetic signatures detectable at a distance (a 1 T localized field might be tens of μT at hundreds of meters away). Military designers would need to consider this from a stealth perspective – the craft could be visible on magnetic anomaly detectors unless measures (like active cancellation coils) are taken.</p>
+<p>In summary, the environment (pressure, altitude, speed) influences how the maglev system performs, but the design aims to be adaptive: at low speed, high density, it behaves like an EM hovercraft; at high speed, thin air, it transitions to more of an MHD-assisted glider. The power plant must be sized for the worst-case (hovering at takeoff). The reactor and radiators are integrated in the vehicle’s core, as shown in schematics, with considerations for both electrical output and heat dissipation clearly paramount​.</p>
+<h3 id="flight-dynamics-and-thrust-vector-control"><em>Flight Dynamics and Thrust Vector Control</em></h3>
+<p>Controlling a disc-shaped electromagnetic craft requires balancing forces without the typical control surfaces (no rudder, aileron, etc.). Fortunately, the electromagnetic propulsion system itself can provide full 6-degree-of-freedom control by adjusting field strengths around the vehicle. The craft’s stability and maneuvers (pitch, roll, yaw, and translation) are governed by how the magnetic forces are distributed:</p>
+<p><strong>Hovering Stability:</strong> In a basic hover, the main lift coil produces a symmetric upward force. The craft is like a coin balanced on a fountain of plasma. If it tilts, the plasma flow and currents may shift, potentially causing a runaway instability. To counter this, the vehicle employs either feedback control or passive stabilization. One passive method is the inherent gyroscopic effect if the plasma is made to rotate (a spinning plasma ring could stabilize like a spinning top). More practically, active stabilization coils (trim coils) detect any tilt and increase the field on the lower side to push it back up. Since, electromagnetic forces are very responsive (limited by electromagnetic propagation—instant at the scale of the craft—and the electronics’ response time), the craft can correct orientation faster than a human could perceive. It likely has an automatic stability augmentation system.</p>
+<p><strong>Pitch and Roll:</strong> To pitch forward (nose down) for horizontal flight, the craft needs more lift at the rear than the front. This can be done by increasing the magnetic field or plasma current at the rear end of the disc relative to the front. For instance, trim coils at the aft can be energized to strengthen the field there, so the plasma push is greater at the back, tilting the craft forward. Conversely, to roll (say tilt right side down), the field on the right edge is increased or the left side decreased. Since, our primary coil encircles the whole craft, we can’t just turn off half of it (the current circulates around). Instead, we might have segmented coils or use auxiliary normal-conducting electromagnets over different sectors. Another method is to physically slightly distort the current distribution in the plasma: by biasing the electrode currents so that more plasma current flows under one side of the craft than the other. Asymmetric plasma injection (more ionization on one side) would result in more thrust on that side. The net effect is similar to how a quadcopter tilts by throttling propellers differently – here we throttle the electromagnetic thrust in different regions.</p>
+<p><strong>Yaw Control:</strong> Yaw (rotating about the vertical axis) can be achieved by creating a torque between the craft and the air. One approach: induce a tangential force (clockwise or counter-clockwise) on the plasma to spin it a bit, which via Newton’s third law imparts an opposite spin on the craft. In other words, if we momentarily drive the plasma current in a non-radial path such that JB produces a horizontal couple, we can rotate the craft. For example, drive a swirling current under the craft (like a partial swirl rather than full symmetric) – the plasma gets a rotational push one way, the craft yaws the other. Once the desired orientation is reached, the swirl is removed so the craft doesn’t continue to spin. Another method is to use the Earth’s field: a strong craft magnet angled relative to Earth’s field experiences a torque trying to align (similar to a magnetometer). By modulating its own field slightly out of alignment, the craft could in theory “magnetically lock” its heading. However, this force is feeble compared to using the plasma directly. Likely the vehicle relies on electromagnetic torques internally – possibly having a set of control moment gyros or reaction wheels powered by the reactor for fine yaw control when hover thrust is low. Yet at speed, asymmetrical plasma forces should suffice for yaw as well (like differential drag).</p>
+<p><strong>Translational Movement:</strong> In hover, the craft can move laterally by tilting (as a helicopter would) or by creating a directional thrust with asymmetric fields. If truly level, it could also generate a sideways force by directing plasma out at an angle. For instance, if the magnetic field is tilted a bit in one quadrant, the plasma there might be accelerated diagonally, producing a sideways thrust component. It is conceptually possible for the craft to “slide” horizontally without pitching, by creating a controlled imbalance in currents (like having a stronger ion flow on one side that pushes that side up and slightly inward). However, it’s simpler to tilt and use a component of lift to move horizontally.</p>
+<p><strong>Aerodynamic Surfaces (if any):</strong> A disk-style craft has no obvious wings, but it might still use small moving vanes or control fins in the plasma flow for additional control at certain speeds. Some designs include electrostatic or magnetized fins that can be extended to vector plasma. In our purely electromagnetic design, we assume no moving parts; all control is done via electromagnetism.</p>
+<p><strong>Interaction with Moment of Inertia:</strong> The vehicle’s mass distribution (with a heavy reactor in the middle, etc.) means it has significant rotational inertia. The electromagnetic control system must be tuned to avoid overshooting or oscillating. Since, there is no natural damping (unlike an airplane which has air resistance on fins), the craft might oscillate if over-corrected. The plasma itself provides some damping (as it is push-pulled, it tends to stabilize like a hovercraft’s air cushion somewhat). Additionally, the flux pinning concept mentioned earlier could be utilized in a creative way: if multiple craft fly together and share magnetic fields, they could semi-rigidly lock relative positions, but that’s speculative and not necessary for single-craft control.</p>
+<p><strong>Coil Phasing and Field Shaping:</strong> Modern control could involve phasing the currents in multiple coils. If we have, say, four coils spaced at 90° around the rim, we can drive them with currents that are not steady DC but have slight AC components out of phase. This can literally <em>move</em> the magnetic field around the craft. A travelling wave around the coil ring could entrain the plasma in a rotating flow for stability, or counteract any precession. The phasing essentially adds a controllable Lorentz-force “profile” that can be rotated to any angle, providing full 360° of thrust vectoring. In principle, by combining modes (like a Fourier synthesis of field patterns), one can shape the pressure distribution under the craft arbitrarily: more push here, less there. This kind of field-shaping control is akin to adaptive optics but with magnetic pressure – sensors detect the craft’s attitude and effectors (coils) adjust the pressure map to restore balance.</p>
+<p>Overall, the flight dynamics are governed by a dynamic electromagnetic feedback loop. The vehicle likely has an inertial measurement unit (IMU) and maybe electromagnetic field sensors that feed into a control computer, which then tweaks coil currents and plasma injector settings many times per second. This keeps the craft balanced and allows executing maneuvers. Because there is no inherent “weather vane” stability (like a tail on a plane), the craft is actively stabilized at all times (more like a fighter jet or a rocket that needs constant adjustments). Fortunately, superconducting coils can change current on the order of milliseconds if designed for it, and plasma can respond even faster, so the control bandwidth is high.</p>
+<p>In summary, thrust vectoring and attitude control are achieved by modulating the electromagnetic field distribution. By creating intentional asymmetry in the JB forces, the craft can tilt, translate, or rotate as needed. No moving parts are required – the vehicle’s “engine” doubles as its control system. This is a fundamentally different paradigm from conventional aircraft, but it offers extreme agility. The limiting factor will be ensuring the control algorithms are robust and that actuators (coils, power electronics) respond swiftly. Assuming those technical challenges are met, the craft could in theory hover rock-steady or perform sudden accelerations that would be impossible in a mechanically driven vehicle (limited only by the inertial g-forces on the craft and occupants, which for crewed operation would need to be managed).</p>
+<h2 id="performance-limits-and-constraints">Performance Limits and Constraints</h2>
+<p>Finally, we assess the limits of this propulsion approach – how far can we push it, and what constraints will ultimately cap the performance?</p>
+<p><strong>Maximum Magnetic Field:</strong> The HTS coil’s field is limited by the superconductor’s critical current and critical field. YBCO-family superconductors can operate in fields of several tens of teslas at low temperature (20–30 K), but at their higher operating temperature (~77 K) the practical limit is lower (a few teslas) before they start to lose superconductivity. In our design we might operate the coils around 50–70 K to strike a balance, possibly obtaining up to ~5–10 T in the coils’ core if needed (with advanced REBCO tape as used in recent high-field magnets). However, pushing to the upper limits risks a quench. A design field of ~1–2 T at the region of interaction (below the craft) is chosen for a safety margin. Even at 1 T, as shown, the pressure is plenty. The coil might generate a higher field internally (5 T in the winding pack) but due to geometry, the field in the open space below is lower. We must also avoid saturating any ferromagnetic structures in the craft – likely most of the structure will be non-magnetic materials (aluminum or composites) to prevent field distortion or eddy currents.</p>
+<p><strong>Structural Forces:</strong> A field of 2 T within a large coil induces tremendous hoop stress. For a rough idea, the Lorentz force per meter on a coil segment carrying I in a field B is f=IB. If our coil has 1 MA-turn distributed around it, and local field of 2 T, that’s on the order of 2106 N per meter of circumference. The coil’s structure must handle this by tensile strength. Using high-strength fibers (like S-glass or carbon fiber) in an epoxy matrix around the coil is standard in magnet engineering. The stress could be on the order of 100 MPa or more, which is within capabilities of modern composites (which can exceed 1000 MPa tensile). So it’s feasible but requires careful engineering similar to a rocket motor casing or large flywheel rim. Vibration and fatigue are another concern – as the craft modulates thrust, the coils may experience cyclic loads. The system should be built to aerospace fatigue standards.</p>
+<p><strong>Thermal Limits:</strong> We discussed cooling – the cryocoolers need to handle the heat load. If the craft operates in a hot environment (atmospheric re-entry from hypersonic flight), the thermal insulation might see outside skin temperatures of thousands of Kelvins. Multi-layer insulation and perhaps active cooling of the coil cryostat with a liquid cryogen loop might be necessary. Possibly, a liquid hydrogen fuel could double as a coolant: some advanced concepts propose using liquid hydrogen (20 K) both as reactor fuel and to flood through the magnet system as an emergency coolant if the cryocoolers can’t keep up​. The craft’s endurance will depend on keeping everything within thermal limits; a hyper-energetic flight might be limited by heat soaking (needing to cool off after a high-power sprint).</p>
+<p><strong>Plasma Limitations:</strong> The plasma can only be pushed so hard before it destabilizes. If we drive too high a current, we might get arcs or filamentation (uneven current channels) which reduce effectiveness. Also, if the plasma gets extremely hot (tens of thousands of K), it could emit plasma jets or blow itself out of the region we want. There is likely an optimal plasma density and current where thrust is maximized without losing the plasma. This becomes a design trade: too dense a plasma is hard to sustain (power-wise), too sparse and it can’t carry enough current. The vehicle may need to modulate injection to keep the plasma in a certain regime. At very high velocities, the plasma might be blown downstream quickly, so synchronizing the electromagnetics with the flow rate is important too.</p>
+<p><strong>Lift and Thrust Ratios:</strong> A key performance metric is the thrust-to-weight ratio. In principle, an electromagnetic thruster could have T/W &gt; 1 easily (since we can produce as much thrust as power allows). For hovering, T/W must equal 1 just to stay aloft; anything more can be used for acceleration. Our full-scale design aimed for ~1.0–1.2 T/W (just enough to hover and maneuver gently). It’s not intended to be a high-acceleration vehicle in the atmosphere (extreme accelerations at low altitude would be limited by air resistance and structural loads anyway). In forward flight, we consider lift-to-drag (L/D). A conventional aircraft might have L/D ~15 at subsonic speeds, but a hypersonic wedge has L/D ~2. An EM craft could potentially exceed L/D of 4–5 at hypersonic speeds by actively manipulating shock and pressure distributions​. This means it could generate lift more efficiently relative to drag than normal hypersonic vehicles, giving it superior range or maneuverability at those speeds​. However, L/D &gt; 1 requires forward motion (in pure hover L/D is irrelevant, it’s all thrust). So the best of both worlds would be: T/W ≥ 1 for VTOL, and high L/D in cruise. Our system, if perfected, seems to allow that.</p>
+<p><strong>G-Force and Maneuver Limits:</strong> If this were a crewed military craft, one constraint is the crew’s tolerance. The craft might be capable of very abrupt vectoring (going from hover to full horizontal thrust in a split second), which could subject occupants to many G’s. The design might intentionally limit thrust vector slewing rates to keep acceleration within, say, 5 g for crew comfort (unless it’s a drone). Of course, one often-mentioned allure of disk-style craft is incredible maneuvers; possibly, if inertial dampening or novel physics (like gravity control) were in play, they could overcome this. Yet in the classical EM analysis, assume Newtonian inertia still applies​.</p>
+<p><strong>Electrical and EM Interference:</strong> The high currents and voltages on the craft could interfere with its own electronics. The avionics and control circuits must be hardened or shielded. Likewise, the crew compartment must be shielded from high electric fields and any radiation from the plasma (which will emit ultraviolet light, RF noise, etc.). Likely have a Faraday cage around the cabin​ and use fiber optic signals or other EMI-immune links for instrumentation. The intense magnetic field can also induce currents in any conductive materials (eddy currents). The craft’s hull might need slotted or composite construction to avoid large loops that the field could induce currents in (to prevent energy losses and heating).</p>
+<p><strong>Operational Constraints:</strong> Ambient conditions like rain, dust, or electromagnetic environment could pose limits. Flying in a thunderstorm, the craft’s ionized bubble might trigger lightning or be disturbed by external electric fields. Also, using such a propulsion at low altitude over civilian areas would likely ionize the air in a noisy way (visible glow, RF interference to radio communications, etc.). These aren’t fundamental physics limits, but practical operating concerns.</p>
+<p><strong>Scalability:</strong> The physics we’ve analyzed show that small-scale prototypes are feasible in the near term, whereas full-scale (10+ m) crewed craft push against multiple limits simultaneously (power, materials, thermal). It’s worth noting a conclusion from a 2010 DIA report: “the outlook for MHD propulsion could increase dramatically if hypersonic vehicles begin to carry powerful onboard electricity sources, such as nuclear reactors.”​</p>
+<p>This aligns with our findings – the concept hinges on the power supply. Assuming power is solved, HTS magnets and plasma drives are catching up: recent progress in HTS and power electronics is encouraging. For example, all-electric ship motors using HTS have demonstrated multi-megawatt, multi-tesla machinery, and experimental fusion magnets show we can build lighter, stronger superconducting coils than before. So magnetically, it scales. Plasma-wise, we have large plasma wind tunnels and MHD generators that handle similar conditions, though integrating one into a compact craft is new territory.</p>
+<p>In conclusion, an electromagnetic propulsion system for a disk-style vehicle is at the edge of plausible technology. It does not violate any known physics – it obeys Maxwell’s equations and Newton’s laws throughout​</p>
+<p>The concept has been shown piecewise in laboratories (levitating superconductors, ion thrusters, MHD flow control). The remaining challenges are primarily engineering: achieving the required power-to-weight ratio, ensuring materials survive the extreme fields and temperatures, and orchestrating the complex interactions of plasma and magnetics at large scale​. Our analysis suggests that a small-scale demonstrator could be built in the coming decades that uses a superconducting magnet and ionized air to hover (albeit likely tethered to a power source)​ Scaling up to a 20 m, Mach 20 craft will require breakthroughs in energy storage and thermal If those occur, the payoff would be revolutionary: a craft that can seamlessly hover, zip to hypersonic speed, and execute maneuvers unlike anything conventional aerodynamics would allow – essentially “flying saucers” driven by electromagnetic force.</p>
+<h2 id="technical-schematics-of-the-propulsion-system">Technical Schematics of the Propulsion System</h2>
+<p>To visualize the system, we provide cross-sectional schematics for both a full-scale crewed vehicle (~15 m diameter) and a smaller prototype (~2 m diameter). These diagrams show the arrangement of major components described above.</p>
+<p>Illustration displays a cross-sectional schematic of a full-scale electromagnetic disk-style craft (side view, cut through the center). The disk-shaped hull houses a toroidal HTS coil around its rim – this coil generates the primary magnetic field ( field lines) for lift. A central crew cabin is surrounded by a ring-shaped power plant, such as a compact nuclear reactor, to supply the multi-megawatt power. Cryocoolers are mounted around the coil to maintain superconducting temperatures. On the bottom center, a plasma injector creates and expels ionized air. Arrows indicate the Lorentz forces: the plasma is pushed downward, and the craft is pushed upward (“lift”). The crew and equipment would be shielded (Faraday cage) from the intense fields.</p>
+<p>In the illustration, the superconducting coil spans the perimeter, creating a magnetic field that arcs through the space below the craft. The reactor (or power source) is toroidal, which could be a conceptual fusion reactor or a fission reactor with a donut-shaped heat exchanger/radiator. The cryocoolers interface with the coil cryostat to remove heat and keep the HTS below its critical temperature. The plasma injector at the bottom could be a system of electrodes or a microwave cavity that ionizes incoming air (in this side view it’s shown simply as a component at the belly). The whole craft’s underside would likely glow with plasma when in operation. Not shown explicitly is the structural support for the coil (which would be integrated into the hull) and the Faraday cage or magnetic shielding around the crew – but these would be implemented as needed to ensure habitability inside. The diagram is highly simplified; in reality many more coils and components (power converters, avionics, etc.) would fill the interior.</p>
+<p>A second version of the illustration, cross-sectional schematic of a prototype unmanned craft (~2 m diameter). The layout is similar: a superconducting lift coil around the rim with cryocoolers, and a plasma injector at bottom center. In place of a reactor and crew cabin, this small craft carries an electronics module/payload and a high-power supply (capacitor bank or beamed-power receiver). The same JB mechanism provides lift (arrows).</p>
+<p>The illustration of a smaller scale vehicle. Without a crew, the central region could be filled by power electronics, batteries, or a beamed-power receiver (if, for example, a ground-based laser powers the craft in tests). The “Power Unit” could be a stack of supercapacitors or a compact turbine-generator. The HTS coil is proportionally smaller but still encircles the craft. Such a prototype might achieve lift in a laboratory or field test, demonstrating the core physics. Many of the subsystems (plasma generation, cooling) would be analogous to the full scale, just lower power. The prototype’s advantage is that it might be able to draw power from an external source via tether or wireless transfer, avoiding the need for an onboard reactor.</p>
+<p>These schematics are conceptual, but they capture the system integration: the marriage of superconducting magnet technology, high-power energy source, cryogenics, plasma generation, and flight control, all within a disk-shaped craft. Each subsystem (numbered in the figure descriptions) must work in concert: power generation, power conditioning, superconducting magnets, cryogenic cooling, plasma injection, and field/flow control. For instance, the DIA’s analysis of such configurations emphasizes that only with all parts working together – HTS magnets, plasma/MHD flow control, and a sufficient power supply – can the craft achieve the desired performance​.</p>
+<h2 id="conclusion-and-outlook">Conclusion and Outlook</h2>
+<p>A magnetic-levitation propelled aerospace vehicle as described – effectively a crewed with superconducting magnets and plasma thrusters – lies at the edge of plausibility with near-future technology. The concept is grounded in real physics: using Lorentz forces (from HTS-generated magnetic fields and ionized air currents) to produce thrust and lift is consistent with Maxwell’s laws and has been demonstrated in laboratory subsystems (ion thrusters, MHD accelerators, superconducting levitation demos). Declassified research from the Defense Intelligence Agency and others confirms that the U.S. and other nations have investigated these ideas, motivated by the promise of revolutionizing flight​. The major barriers are power supply, energy storage, and thermal management – essentially, the engineering of a compact power plant and sustaining system to drive the EM propulsion. Current advancements in high-temperature superconductors and high-power electronics are encouraging. For instance, the use of HTS in prototypes (like the all-electric ship motor programs and fusion magnet developments) shows that multi-tesla magnetic devices can be made lighter and more efficient than before. Similarly, new power sources like small modular reactors or even megawatt-class batteries in the future could close the gap.</p>
+<p>It’s worth noting that truly exotic physics approaches – such as direct gravity modification or inertial mass reduction – have also been studied (the DIA’s “Antigravity for Aerospace Applications” report​, or the Navy’s Pais patents​). These propose using high-frequency electromagnetic fields to interact with the quantum vacuum or spacetime, producing levitation without expelling mass. As of 2025, there is no reliable experimental evidence that such effects are attainable at macro scale; they remain speculative. Thus, our analysis did not assume any “free lunch” from new physics – the vehicle must obey Newtonian action-reaction (throwing momentum out the back to move forward). If one day inertial manipulation proves real, it could drastically reduce the power required (by effectively reducing the craft’s weight or allowing extreme maneuvers without G-forces). Until then, a magnetic plasma propulsion system as detailed here appears to be the most scientifically grounded path toward a disk-style craft.</p>
+<h2 id="glossary-of-terms-and-acronyms">Glossary of Terms and Acronyms</h2>
+<p><strong>AC</strong> – Alternating Current. Electric current that periodically reverses direction. Used in some electromagnets and power systems.</p>
+<p><strong>Aerospace-Craft</strong> – A vehicle capable of both atmospheric flight and space flight.</p>
+<p><strong>Ampère’s Law</strong> – Maxwell’s equation relating magnetic fields to currents and changing electric fields (see Maxwell’s equations).</p>
+<p><strong>Antigravity</strong> – A term for canceling or repelling gravity. Not achieved in practice; studied theoretically​.</p>
+<p><strong>B (Magnetic Field)</strong> – Measured in teslas (T). B220 gives magnetic pressure.</p>
+<p><strong>Biefeld–Brown Effect</strong> – An electrohydrodynamic thrust observed with high-voltage capacitors (ionic wind), sometimes misnamed antigravity.</p>
+<p><strong>Cryocooler</strong> – A refrigeration device for reaching cryogenic temperatures (below ~120 K). Used to cool HTS magnets.</p>
+<p><strong>DARPA</strong> – Defense Advanced Research Projects Agency (US).</p>
+<p><strong>DC</strong> – Direct Current. Unidirectional current. A superconducting DC magnet is very efficient (no resistive loss).</p>
+<p><strong>EM</strong> – Electromagnetic. Often used as shorthand (EM field, EM propulsion).</p>
+<p><strong>Faraday Cage</strong> – An enclosure made of conductive material that blocks external electric fields. Used to protect crew/electronics from strong EM fields​.</p>
+<p><strong>Faraday’s Law</strong> – Maxwell’s law of induction: changing magnetic flux induces an EMF (voltage) (see Maxwell’s equations).</p>
+<p><strong>Flux Pinning</strong> – The trapping of magnetic flux lines in a Type-II superconductor, which can lock a magnet in place relative to the superconductor. Provides stable levitation.</p>
+<p><strong>HTS</strong> – High-Temperature Superconductor. Superconducting material with critical temperature above 77 K (so it can be cooled with liquid nitrogen). For instance, YBCO.</p>
+<p><strong>Ion Thruster</strong> – Electric space propulsion device that accelerates ions (typically Xenon) to produce thrust. High efficiency, low thrust.</p>
+<p><strong>J (Current Density)</strong> – Electric current per unit area, A/m². In plasma, <strong>J=E</strong> (Ohm’s law for plasma with conductivity ).</p>
+<p><strong>J×B Force</strong> – Cross product of current density and magnetic field, yielding force density (Lorentz force in continuum form). Responsible for MHD thrust​.</p>
+<p><strong>L/D (Lift-to-Drag Ratio)</strong> – A performance metric: lift divided by drag. Higher L/D means more efficient flight (less drag for given lift).</p>
+<p><strong>Lorentz Force</strong> – The force on a charged particle due to electric and magnetic fields: <strong>F=q(E+vB)​</strong>. It has electric (<strong>qE</strong>) and magnetic (<strong>qvB</strong>) parts.</p>
+<p><strong>Mach Number</strong> – Speed divided by speed of sound in the medium. Mach 10 at 60k ft corresponds to ~3.0 km/s.</p>
+<p><strong>Maxwell’s Equations</strong> – Four fundamental equations of electromagnetism (Gauss’s E, Gauss’s B, Faraday’s law, Ampère’s law)​.</p>
+<p><strong>Maxwell Stress Tensor</strong> – A tensor representation of EM force/pressure. <strong>Tij=0EiEj-0ijE22+BiBj0-ijB220</strong>. Can integrate Tzj over a surface to get force in z-direction​.</p>
+<p><strong>MHD (Magnetohydrodynamics)</strong> – The study of electrically conducting fluids (plasma, saltwater, etc.) in magnetic fields. MHD propulsion uses Lorentz forces on a fluid.</p>
+<p><strong>MPD Thruster</strong> – Magnetoplasmadynamic Thruster. A type of electromagnetic space thruster where a plasma is accelerated by J×B forces (often with a central cathode and outer anode geometry).</p>
+<p><strong>Plasma</strong> – Ionized gas containing free electrons and ions, which conducts electricity and responds to magnetic fields. Often called the “fourth state of matter.”</p>
+<p><strong>Plasma Frequency p</strong> – Natural oscillation frequency of electrons in a plasma, <strong>p=nee2me0</strong>, where ne is electron density. Relevant for understanding plasma response to RF fields.</p>
+<p><strong>Propellant</strong> – In rockets, the reaction mass (fuel and oxidizer) is expelled to produce thrust. In an air-breathing EM craft, air serves as the propellant mass.</p>
+<p><strong>Psi (ψ) Particle</strong> – In quantum vacuum discussions, might refer to wavefunctions; not directly used here. (Mentioned for completeness due to Pais patent context of vacuum states.)</p>
+<p><strong>Q (Charge)</strong> – Total electric charge (Coulombs). q usually denotes a test charge or particle charge.</p>
+<p><strong>Reentry</strong> – The phase of flight where a vehicle from space comes back into the atmosphere, experiencing hypersonic speeds and plasma formation. Many plasma aerodynamic ideas are tested in this regime.</p>
+<p><strong>Scramjet</strong> – Supersonic Combustion Ramjet. An air-breathing jet that has no moving parts, uses vehicle forward motion to compress air, and burns fuel in supersonic airflow. Effective ~Mach 5–10, but very challenging to operate.</p>
+<p><strong>Superconductor</strong> – A material that conducts electricity with zero resistance below a critical temperature Tc. It expels magnetic fields (Meissner effect) up to a critical field strength.</p>
+<p><strong>Tesla (T)</strong> – Unit of magnetic flux density. 1 T = 10,000 gauss. Earth’s field ~50 µT; an MRI ~1–3 T; cutting-edge HTS magnets 20+ T.</p>
+<p><strong>Thrust-to-Weight (T/W)</strong> – Ratio of thrust produced to weight of vehicle. For vertical takeoff, T/W must exceed 1.</p>
+<p><strong>Torr</strong> – Unit of pressure. 760 Torr = 1 atm. The DIA text mentions “weakly ionized plasmas” at ~10–100 Torr for high altitude work​<br>
+(100 Torr is about 13% of sea level pressure).</p>
+<p><strong>Virtual Cowl</strong> – A concept where a plasma/magnetic field acts like an intake cowl (lip) for a scramjet, to guide airflow without a physical structure​.</p>
+<p><strong>YBCO</strong> – Yttrium Barium Copper Oxide, a high-temperature superconductor with Tc 92 K. Used in many HTS magnet applications.</p>
+<h2 id="equation-and-numerical-glossary">Equation and Numerical Glossary</h2>
+<p><strong>∇·E:</strong> The divergence of the electric field (E).<br>
+<strong>ρ:</strong> The electric charge density (charge per unit volume).<br>
+<strong>ε₀:</strong> The vacuum permittivity (a constant ≈ 8.85×10⁻¹² F/m).<br>
+<strong>∇·B:</strong> The divergence of the magnetic field (B).<br>
+This states that there are no magnetic monopoles; magnetic field lines form closed loops.<br>
+<strong>∇×E:</strong> The curl of the electric field (E).<br>
+<strong>∂B/∂t:</strong> The time derivative of the magnetic field (B).<br>
+The minus sign indicates that the induced electric field opposes the change in magnetic flux (Lenz’s law).<br>
+<strong>∇×B:</strong> The curl of the magnetic field (B).<br>
+<strong>J:</strong> The electric current density (current per unit area).<br>
+<strong>μ₀:</strong> The vacuum permeability (≈ 4π×10⁻⁷ H/m).<br>
+<strong>ε₀:</strong> As above, the vacuum permittivity.<br>
+<strong>∂E/∂t:</strong> The time derivative of the electric field (E).<br>
+This equation shows that magnetic fields are generated both by electric currents and by changing electric fields.<br>
+<strong>c:</strong> The speed of light in vacuum (≈ 3×10⁸ m/s).<br>
+<strong>μ₀, ε₀:</strong> As defined above; their combination sets the speed of light.<br>
+<strong>Φ_B:</strong> The magnetic flux (the product of magnetic field B and the area perpendicular to it).<br>
+<strong>dΦ_B/dt:</strong> The time rate of change of magnetic flux.<br>
+The negative sign reflects Lenz’s law (the induced EMF opposes the change in flux).<br>
+<strong>I_ind:</strong> The current induced in a conductor due to a changing magnetic field.<br>
+<strong>L:</strong> The inductance of a circuit element (a measure of its ability to store magnetic energy).<br>
+<strong>f₀:</strong> The resonant frequency of an LC (inductor–capacitor) circuit.<br>
+<strong>L:</strong> Inductance.<br>
+<strong>C:</strong> Capacitance.<br>
+The formula shows the frequency at which the circuit will naturally oscillate.<br>
+<strong>Q:</strong> Generally represents a net charge (for example, the total charge on a capacitor).<br>
+<strong>q:</strong> The charge of a single particle (such as an electron or proton).<br>
+<strong>F:</strong> The force acting on a charged particle.<br>
+<strong>q:</strong> The charge of the particle.<br>
+<strong>E:</strong> The electric field.<br>
+<strong>v:</strong> The velocity of the charged particle.<br>
+<strong>B:</strong> The magnetic field.<br>
+<strong>v × B:</strong> The cross product, giving a force perpendicular to both the velocity and magnetic field.<br>
+<strong>f:</strong> The force per unit volume.<br>
+<strong>ρ E:</strong> The force due to the electric field acting on charge density.<br>
+<strong>J × B:</strong> The magnetic (Lorentz) force acting on current density (J) in the magnetic field (B).<br>
+<strong>u:</strong> The energy stored per unit volume in the electromagnetic fields.<br>
+<strong>E²:</strong> The square of the electric field magnitude.<br>
+<strong>B²:</strong> The square of the magnetic field magnitude.<br>
+<strong>P_B:</strong> The pressure exerted by a magnetic field.<br>
+<strong>B:</strong> The magnetic field strength.<br>
+<strong>μ₀:</strong> The vacuum permeability.<br>
+<strong>T_zz:</strong> The z–component of the Maxwell stress tensor, representing the net electromagnetic force per unit area in the vertical direction.<br>
+<strong>B_t:</strong> The tangential (parallel) component of the magnetic field relative to a surface.<br>
+<strong>B_n:</strong> The normal (perpendicular) component of the magnetic field relative to that surface.<br>
+<strong>ω_p:</strong> The plasma frequency (angular frequency of electron oscillations in a plasma).<br>
+<strong>n_e:</strong> The electron number density (electrons per unit volume).<br>
+<strong>e:</strong> The elementary charge (magnitude of the charge of an electron, ≈ 1.6×10⁻¹⁹ C).<br>
+<strong>ε₀:</strong> Vacuum permittivity.<br>
+<strong>m_e:</strong> The mass of an electron (≈ 9.11×10⁻³¹ kg).<br>
+<strong>E:</strong> The energy stored in the magnetic field of an inductor.<br>
+<strong>I:</strong> The current flowing through the inductor.<br>
+<strong>Φ₀:</strong> The quantum of magnetic flux (the smallest unit of magnetic flux that can penetrate a superconductor).<br>
+<strong>h:</strong> Planck’s constant (≈ 6.626×10⁻³⁴ J·s).<br>
+<strong>e:</strong> The elementary charge.<br>
+<strong>T_c:</strong> The critical temperature below which a material becomes superconducting.<br>
+<strong>YBa₂Cu₃O₇₋ₓ (YBCO):</strong> A high-temperature superconductor with T_c ≈ 90 K.<br>
+<strong>HgBa₂Ca₂Cu₃O₈:</strong> A high-temperature superconductor with T_c up to about 133 K under pressure.<br>
+<strong>NbTi:</strong> A conventional (low-T_c) superconductor with T_c ≈ 9 K.<br>
+<strong>H_c1:</strong> The lower critical magnetic field (below which the superconductor completely expels magnetic flux).<br>
+<strong>H_c2:</strong> The upper critical magnetic field (above which superconductivity is destroyed).<br>
+<strong>H_c1 &lt; H &lt; H_c2:</strong> The range where the superconductor is in the mixed (vortex) state.<br>
+<strong>B ~ 50 μT:</strong> Indicates that Earth’s magnetic field is on the order of 50 microteslas.<br>
+<strong>B²/(2μ₀) ~ 10⁻³ Pa:</strong> When the magnetic pressure is calculated for Earth’s field, it is approximately 10⁻³ pascals, a very low pressure compared to what is needed for lift.<br>
+<strong>J_c(T):</strong> The critical current density as a function of temperature.<br>
+<strong>H_c1(T):</strong> The lower critical magnetic field as a function of temperature.<br>
+<strong>F_z:</strong> The net vertical force (such as levitation force).<br>
+<strong>T_zz:</strong> The vertical component of the Maxwell stress tensor (as defined above).<br>
+<strong>dA:</strong> An element of the area over which the stress is integrated.<br>
+<strong>2.4×10⁴ N/m² (24 kPa):</strong> An example thrust pressure achieved in a microwave plasma thruster experiment.<br>
+<strong>~28 N:</strong> An example of the thrust produced by such a thruster in laboratory tests.<br>
+<strong>6 N and 3 N/m²:</strong> Representative values for ion wind (electrostatic) thrusters, which typically produce lower thrust.<br>
+<strong>F:</strong> Total thrust force.<br>
+<strong>ṁ (dot m):</strong> The mass flow rate of the expelled propellant (mass per unit time).<br>
+<strong>v_exhaust:</strong> The exhaust (or exit) velocity of the propellant.<br>
+<strong>p_exit:</strong> The pressure at the nozzle exit.<br>
+<strong>p_ambient:</strong> The ambient pressure.<br>
+<strong>A_exit:</strong> The area of the nozzle exit.<br>
+<strong>E:</strong> Energy stored in the magnetic field of the inductor.<br>
+<strong>L:</strong> The inductance (in henries).<br>
+<strong>I:</strong> The current through the inductor (in amperes).<br>
+<strong>T:</strong> Magnetic Field Strength.</p>
+<h2 id="references-and-sources">References and Sources</h2>
+<ol>
+<li>KAIST. (2020). <em>Lecture notes on Maxwell’s equations and induction</em>. Coursera. Retrieved from <a href="https://www.coursera.org/specializations/electrodynamics">https://www.coursera.org/specializations/electrodynamics</a>.  Fundamental laws describing how time-varying magnetic fields induce electric fields and how currents and electric fields generate magnetism.</li>
+<li>MIT. (2022). <em>Electromagnetism course (Lorentz force)</em>. Retrieved from <a href="https://web.mit.edu/">https://web.mit.edu</a>. Definition of the force on charged particles due to electric and magnetic fields (Lorentz force law).</li>
+<li>Fitzpatrick, R. (2023). <em>Plasma physics: Magnetic pressure and stress tensor</em>. Retrieved from <a href="https://farside.ph.utexas.edu/">https://farside.ph.utexas.edu</a>. Discussion of magnetic pressure (B²/(2μ₀)) and tension, and how field lines act like elastic bands in a plasma or field.</li>
+<li>Engineering LibreTexts. (2021). <em>Superconductivity – Meissner effect</em>. Retrieved from <a href="https://eng.libretexts.org/">https://eng.libretexts.org</a>. Note on perfect diamagnetism (χ = –1) in superconductors, meaning complete flux expulsion in the Meissner state.</li>
+<li>OSTI Technical Report. (2006). <em>Flux pinning and levitation in high-Tc superconductors</em>. Retrieved from <a href="https://osti.gov/">https://osti.gov</a>. Describes how strong pinning in high-Tc superconductors can levitate heavy objects and trap large amounts of flux, yielding stable suspension.</li>
+<li>Inanir et al. (2013). <em>Physica C</em>. Retrieved from <a href="https://osti.gov/">https://osti.gov</a>. Theoretical study showing the levitation force of high-Tc superconductors decreases with temperature as critical current and pinning weaken, emphasizing the need for low-temperature operation for maximum force.</li>
+<li>Popular Mechanics. (2020). Retrieved from <a href="https://popularmechanics.com/">https://popularmechanics.com</a>. News on a microwave air plasma thruster achieving jet-engine–comparable thrust using only air and electricity, citing an AIP Advances paper.</li>
+<li>Ye et al. (2020). <em>AIP Advances</em>. Retrieved from <a href="https://infinityturbine.com/">https://infinityturbine.com</a>.  Experimental demonstration of a 2.45 GHz microwave plasma thruster producing 2.4×10⁴ N/m² thrust pressure, validating electromagnetic air-breathing propulsion concepts.</li>
+<li>NASA Lewis Research Center. (1989). <em>Microwave electrothermal thruster (MET) development</em>. Retrieved from <a href="https://ntrs.nasa.gov/">https://ntrs.nasa.gov</a>. Use of a 6 T superconducting magnetic nozzle to improve plasma thruster performance at high power, indicating superconductors’ role in containing and accelerating plasma.</li>
+<li>DIA Defense Warning Office. (2003). Retrieved from <a href="https://dia.mil/">https://dia.mil</a>. Assessment of speculative &ldquo;gravity manipulation&rdquo; research; concludes electromagnetic-to-gravity coupling for propulsion is theoretical and extremely weak, reinforcing classical mechanics.</li>
+<li>NASA/Argonne. (1988). <em>HTS in aeronautics</em>. Retrieved from <a href="https://ntrs.nasa.gov/">https://ntrs.nasa.gov</a>. Early projection that high-Tc superconductors could revolutionize aircraft propulsion through lightweight motors and generators.</li>
+<li>NASA Technical Report. (1989). <em>Aeronautical applications of high-temperature superconductors</em> (NASA CP-10092). Retrieved from <a href="https://ntrs.nasa.gov/">https://ntrs.nasa.gov</a>. Examines how HTS technology could be used in aircraft, predicting HTS motors could achieve ~15 hp/lb specific power.</li>
+<li>NASA NTRS (Multhaup, T.). (1992). <em>Superconducting applications in propulsion systems</em> (NASA TM-105957). Retrieved from <a href="https://ntrs.nasa.gov/">https://ntrs.nasa.gov</a>. Classifies electric propulsion types (electrostatic, electrothermal, electromagnetic) and notes constraints due to magnet weight.</li>
+<li>DIA Defense Intelligence Reference Document. (2010). <em>MHD air-breathing propulsion and power for aerospace applications</em>. Washington, DC: Defense Intelligence Agency. Retrieved from <a href="https://dia.mil/">https://dia.mil</a>. Surveys magnetohydrodynamic propulsion concepts for hypersonic vehicles, covering plasma generation and nuclear power requirements.</li>
+<li>DIA Defense Intelligence Reference Document. (2010). <em>Antigravity for aerospace applications</em>. Washington, DC: Defense Intelligence Agency. Retrieved from <a href="https://dia.mil/">https://dia.mil</a>. Reviews concepts of gravity control, concluding no active gravity neutralization is currently achievable.</li>
+<li>Salvatore Pais. (2018). <em>Craft using an inertial mass reduction device</em> (US Patent 10,144,532). U.S. Navy. Retrieved from <a href="https://patents.google.com/">https://patents.google.com</a>. Describes electromagnetic resonators creating fields purported to reduce inertia/gravity, indicating Navy interest.</li>
+<li>Olatunji, J., et al. (2024). &ldquo;Hēki: A superconducting magnet for space propulsion on the ISS – thermal testing.&rdquo; <em>Superconductivity</em>, 12. Academic work on using HTS magnet in space propulsion tests onboard the ISS.</li>
+<li>Kimura, S., et al. (2022). &ldquo;A ‘V’-shaped superconducting levitation module for lift enhancement.&rdquo; <em>IEEE Trans. Applied Superconductivity</em>, 32(6). Demonstrates stable levitation using YBCO superconductors, achieving significant lift via flux pinning.</li>
+<li>Goldstein, D. (2010). &ldquo;Plasma aerodynamics for hypersonics.&rdquo; <em>Journal of Propulsion and Power</em>, 26(4). Reviews plasma discharge applications in airflow control for hypersonic vehicles.</li>
+<li>Sinko, J. (2019). &ldquo;Electrohydrodynamic thrusters in atmosphere.&rdquo; <em>IEEE TPS</em>, 47(1). Analyzes scalability of ionic propulsion for drones and limitations at high thrust.</li>
+<li>NASA/USRA. (2004). &ldquo;Breakthrough propulsion physics program: State of the art.&rdquo; Retrieved from <a href="https://ntrs.nasa.gov/">https://ntrs.nasa.gov</a>. Assesses exotic propulsion concepts against established physics, reinforcing momentum conservation.</li>
+<li>Freeman, E. (Ed.). (2009). <em>Frontiers of propulsion science</em> (AIAA Progress Series Vol. 227). Retrieved from <a href="https://dia.mil/">https://dia.mil</a>. Collection of advanced propulsion papers, examining the boundary between mainstream science and speculative propulsion studies.</li>
+<li>CIA FOIA Document. (1968). &ldquo;Propulsion systems for space&rdquo; (Scientific Intelligence Report). Retrieved from CIA archives. Analysis of historical Soviet research into advanced propulsion technologies, including MHD and electric propulsion.</li>
+</ol>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li></li>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#theoretical-foundations-in-electrodynamics">Theoretical Foundations in Electrodynamics</a>
+      <ul>
+        <li><a href="#maxwells-equations-and-electromagnetic-fields"><em>Maxwell’s Equations and Electromagnetic Fields</em></a></li>
+        <li><a href="#electromagnetic-induction-and-ac-field-dynamics"><em>Electromagnetic Induction and AC Field Dynamics</em></a></li>
+        <li><a href="#lorentz-force-and-electromagnetic-pressure">Lorentz Force and Electromagnetic Pressure</a></li>
+        <li><a href="#ac-circuits-waveguides-and-resonance-considerations"><em>AC Circuits, Waveguides, and Resonance Considerations</em></a></li>
+      </ul>
+    </li>
+    <li><a href="#materials-analysis-high-temperature-superconductors-and-flux-pinning">Materials Analysis (High-Temperature Superconductors and Flux Pinning)</a></li>
+    <li><a href="#engineering-solenoid-design-prototype-vs-full-scale">Engineering Solenoid Design (Prototype vs. Full-Scale)</a></li>
+    <li><a href="#electrodynamic-propulsion-physics-maxwells-equations-and-lorentz-force">Electrodynamic Propulsion Physics (Maxwell’s Equations and Lorentz Force)</a>
+      <ul>
+        <li><a href="#environmental-and-power-considerations"><em>Environmental and Power Considerations</em></a></li>
+        <li><a href="#flight-dynamics-and-thrust-vector-control"><em>Flight Dynamics and Thrust Vector Control</em></a></li>
+      </ul>
+    </li>
+    <li><a href="#performance-limits-and-constraints">Performance Limits and Constraints</a></li>
+    <li><a href="#technical-schematics-of-the-propulsion-system">Technical Schematics of the Propulsion System</a></li>
+    <li><a href="#conclusion-and-outlook">Conclusion and Outlook</a></li>
+    <li><a href="#glossary-of-terms-and-acronyms">Glossary of Terms and Acronyms</a></li>
+    <li><a href="#equation-and-numerical-glossary">Equation and Numerical Glossary</a></li>
+    <li><a href="#references-and-sources">References and Sources</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=%2f%2flocalhost%3a1313%2fposts%2fmagnetic-levitation-propulsion%2f">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=Magnetic%20Levitation%20Propulsion&url=%2f%2flocalhost%3a1313%2fposts%2fmagnetic-levitation-propulsion%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=Magnetic%20Levitation%20Propulsion: %2f%2flocalhost%3a1313%2fposts%2fmagnetic-levitation-propulsion%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=Magnetic%20Levitation%20Propulsion&amp;body=Check%20out%20this%20site %2f%2flocalhost%3a1313%2fposts%2fmagnetic-levitation-propulsion%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar =  true ;
+  if(stickyNavBar) {
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = headerElem.offsetHeight + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    
+ 
+
+<div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path id="footer-socialNetworks-github-svg-path"
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://linkedin.com" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <a href="https://twitter.com" aria-label="twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+            <path fill="#03a9f4"
+                d="M42,37c0,2.762-2.239,5-5,5H11c-2.762,0-5-2.238-5-5V11c0-2.762,2.238-5,5-5h26c2.761,0,5,2.238,5,5 V37z" />
+            <path fill="#fff"
+                d="M36,17.12c-0.882,0.391-1.999,0.758-3,0.88c1.018-0.604,2.633-1.862,3-3 c-0.951,0.559-2.671,1.156-3.793,1.372C31.311,15.422,30.033,15,28.617,15C25.897,15,24,17.305,24,20v2c-4,0-7.9-3.047-10.327-6 c-0.427,0.721-0.667,1.565-0.667,2.457c0,1.819,1.671,3.665,2.994,4.543c-0.807-0.025-2.335-0.641-3-1c0,0.016,0,0.036,0,0.057 c0,2.367,1.661,3.974,3.912,4.422C16.501,26.592,16,27,14.072,27c0.626,1.935,3.773,2.958,5.928,3c-1.686,1.307-4.692,2-7,2 c-0.399,0-0.615,0.022-1-0.023C14.178,33.357,17.22,34,20,34c9.057,0,14-6.918,14-13.37c0-0.212-0.007-0.922-0.018-1.13 C34.95,18.818,35.342,18.104,36,17.12" />
+        </svg>
+    </a>
+    
+
+    
+    <a href="https://instagram.com" aria-label="instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+            <radialGradient id="yOrnnhliCrdS2gy~4tD8ma" cx="19.38" cy="42.035" r="44.899"
+                gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#fd5" />
+                <stop offset=".328" stop-color="#ff543f" />
+                <stop offset=".348" stop-color="#fc5245" />
+                <stop offset=".504" stop-color="#e64771" />
+                <stop offset=".643" stop-color="#d53e91" />
+                <stop offset=".761" stop-color="#cc39a4" />
+                <stop offset=".841" stop-color="#c837ab" />
+            </radialGradient>
+            <path fill="url(#yOrnnhliCrdS2gy~4tD8ma)"
+                d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z" />
+            <radialGradient id="yOrnnhliCrdS2gy~4tD8mb" cx="11.786" cy="5.54" r="29.813"
+                gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#4168c9" />
+                <stop offset=".999" stop-color="#4168c9" stop-opacity="0" />
+            </radialGradient>
+            <path fill="url(#yOrnnhliCrdS2gy~4tD8mb)"
+                d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z" />
+            <path fill="#fff"
+                d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z" />
+            <circle cx="31.5" cy="16.5" r="1.5" fill="#fff" />
+            <path fill="#fff"
+                d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z" />
+        </svg>
+    </a>
+    
+
+    
+    <a href="https://facebook.com" aria-label="facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+            <path fill="#3F51B5"
+                d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z" />
+            <path fill="#FFF"
+                d="M34.368,25H31v13h-5V25h-3v-4h3v-2.41c0.002-3.508,1.459-5.59,5.592-5.59H35v4h-2.287C31.104,17,31,17.6,31,18.723V21h4L34.368,25z" />
+        </svg>
+    </a>
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            
+                <div class="pb-2">
+                    <a href="//localhost:1313/" title="blog">
+                        <img alt="Footer logo" src="/fav.png"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2025  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>
