@@ -1,4 +1,4 @@
-baseURL: "http://johnny7123.github.io/johnnydefense/"
+baseURL: "https://johnny7123.github.io/johnnydefense/"
 languageCode: en-us
 title: blog
 theme: "hugo-profile"
