@@ -2,20 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/</loc>
+    <loc>http://localhost:1313/johnnydefense/</loc>
     <lastmod>2025-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/magnetic-levitation-propulsion/</loc>
+    <loc>http://localhost:1313/johnnydefense/posts/magnetic-levitation-propulsion/</loc>
     <lastmod>2025-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/</loc>
+    <loc>http://localhost:1313/johnnydefense/posts/</loc>
     <lastmod>2025-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/storm-app-code-report/</loc>
+    <loc>http://localhost:1313/johnnydefense/posts/storm-app-code-report/</loc>
     <lastmod>2025-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>http://localhost:1313/johnnydefense/gallery/</loc>
+    <lastmod>2022-06-25T18:35:46+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>http://localhost:1313/johnnydefense/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/johnnydefense/tags/</loc>
   </url>
 </urlset>
